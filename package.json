@@ -1,0 +1,15 @@
+{
+  "name": "eaglehotel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jquery": "^3.4.1",
+    "w3-css": "^4.1.0"
+  }
+}

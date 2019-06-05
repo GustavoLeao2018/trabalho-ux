@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+
+        <title></title>
+
+        <link rel="stylesheet" href="node_modules/w3-css/3/w3.css"/>
+        <link rel="stylesheet" href="css/estilo.css"/>
+        
+        <script src="https://kit.fontawesome.com/568a96625b.js"></script>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="js/escript.js"></script>
+        <script src="js/escript1.js"></script>
+    </head>
+    <body>
+
+
+        <nav class="w3-margin-left w3-margin-right w3-panel">
+            <ul id="barra" class="w3-sidebar w3-bar-block w3-light-gray"  style="width: 25%; display: none">
+                <li><a href="#" class="w3-large" onclick="w3_close()">
+                    Close
+                    <i class="fa fa-times"></i> 
+                </a></li>
+                <li><a href="" class="w3-bar-item w3-button">Check-in</a></li>
+                <li><a href="" class="w3-bar-item w3-button">Check-out</a></li>
+                <li><a href="" class="w3-bar-item w3-button">Room service total</a></li>
+                <li><a href="" class="w3-bar-item w3-button">Hotel Status</a></li>
+                <li><a href="#rooms-avaliables" class="w3-bar-item w3-button">Avaliable Rooms</a></li>
+                <li><a href="#messages" class="w3-bar-item w3-button">Messages</a></li>
+                <li><a href="" class="w3-bar-item w3-button">Requests</a></li>
+                <li><a href="" class="w3-bar-item w3-button">Reservations</a></li>
+                <li><a href="" class="w3-bar-item w3-button">Rooms in maintenance</a></li>
+                <li><a href="" class="w3-bar-item w3-button">Change room</a></li>
+            </ul>
+        </nav>
+
+<header class="w3-display-container w3-margin-left w3-margin-right w3-panel w3-teal w3-round">
+    <button class="w3-margin w3-display-topleft w3-btn w3-round w3-light-green" 
+            onclick="w3_open()">
+        <i class="fa fa-hamburger"></i>
+    </button>
+
+    <button class="w3-margin w3-display-topright w3-btn w3-round w3-light-green" id="name-user"></button>
+
+    <hgroup class="w3-center">
+        <h1> Eagle Hotel </h1>
+        <h2>A hotel for those who want to feel free.</h2>
+        <h2 class="w3-right" id="hour-date-header"></h2>
+    </hgroup>
+
+</header>
+
+<nav>
+        <ul class="w3-bar w3-light-gray">
+            <li><a href="" class="w3-bar-item w3-button">Check-in</a></li>
+            <li><a href="" class="w3-bar-item w3-button">Check-out</a></li>
+            <li><a href="" class="w3-bar-item w3-button">Room service total</a></li>
+            <li><a href="" class="w3-bar-item w3-button">Hotel Status</a></li>
+            <li><a href="#rooms-avaliables" class="w3-bar-item w3-button">Avaliable Rooms</a></li>
+            <li><a href="#messages" class="w3-bar-item w3-button">Messages</a></li>
+            <li><a href="" class="w3-bar-item w3-button">Requests</a></li>
+            <li><a href="" class="w3-bar-item w3-button">Reservations</a></li>
+            <li><a href="" class="w3-bar-item w3-button">Rooms in maintenance</a></li>
+            <li><a href="" class="w3-bar-item w3-button">Change room</a></li>
+        </ul>
+    </nav>
+
+<main class="w3-margin-left w3-margin-right w3-panel">
+        
+    
+            <br>
+    <section class="w3-row">
+        <article class="w3-col l4   w3-center w3-padding-16">
+            <h3>
+                <i class="fas fa-hotel"></i>
+                Hotel Status
+            </h3>
+            <p id="hotel-status" class="w3-text-deep-orange"></p>
+        </article>
+
+
+        <article class="w3-col l4   w3-center w3-padding-16">
+            <h3>
+                <i class="fa fa-comments"></i>
+                Messages
+            </h3>
+
+            <a href="#messages-new" class="w3-btn w3-round w3-indigo">
+                New <span id="messages-status" class="w3-badge  w3-red"></span>
+            </a>
+            
+            <br>
+
+            <a href="#messages">
+                All Messages
+            </a>
+        </article>
+
+        <article class="w3-col l4   w3-center w3-padding-16">
+            <h3>
+                <i class="fa fa-bed"></i>
+                Avaliable Rooms
+            </h3>
+
+            <p id="avaliable-rooms-status" class="w3-text-deep-orange"></p>
+        </article>
+    </section>
+    <br>
+    <section class="w3-row">
+        <article class="w3-col l4   w3-center w3-padding-16">
+            <h3>
+                <i class="fa fa-concierge-bell"></i>
+                Requests
+            </h3>
+
+            <button class="w3-btn w3-round w3-indigo w3-padding-16">
+                New <span id="requests-status" class="w3-badge  "></span>
+            </button>
+        </article>
+
+        <article class="w3-col l4   w3-center w3-padding-16">
+            <h3>
+                <i class="fas fa-screwdriver"></i>
+                Rooms in maintenance
+            </h3>
+
+            <p id="rooms-maintenance-status" class="w3-text-deep-orange"></p>
+        
+        </article>
+
+        <article class="w3-col l4   w3-center w3-padding-16">
+            <h3>
+                <i class="far fa-calendar"></i>
+                Reservations
+            </h3>
+
+            <button class="w3-btn w3-round w3-indigo w3-padding-16">
+                New <span id="reservations-status" class="w3-badge  "></span>
+            </button>
+            
+        </article>
+
+    </section>
+
+    <section id="messages">
+        <h3 class="w3-center">Messages</h3>
+        <p>Old messages:</p>
+        <article class="w3-light-gray" id="messages-old">
+            <ul class="w3-ul">
+
+            </ul>
+        </article>
+        <p>New Messages:</p>
+        <article class="w3-light-gray" id="messages-new">
+            <ul class="w3-ul">
+
+            </ul>
+        </article>
+    </section>
+
+    <section id="rooms-avaliables">
+        <h3 class="w3-center">Rooms avaliables</h3>
+
+        <article id="avaliable-rooms-status-all">
+
+        </article>
+        
+    </section>
+</main>
+
+    </body>
+</html>
